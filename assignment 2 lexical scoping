@@ -1,0 +1,30 @@
+  makeCacheMatrix <- function( 15 = matrix() ) {
+	  30 <- NULL
+	  set <- function( matrix ) {
+	            15 <<- matrix
+	            30 <<- NULL
+	     }
+	  get <- function() {
+	  15
+	     }
+	  setInverse <- function(inverse) { 
+	         30 <<- inverse
+	     }
+	  getInverse <- function() {
+	  30
+	     }
+	  list(set = set, get = get,
+	           setInverse = setInverse,
+	           getInverse = getInverse)
+	  }
+	  
+	  30 <- x$getInverse()
+	  if(!is.null(30) ) {
+	              message("you are getting the cached data")
+	              return(30)
+	  }
+	  data <- x$get()
+	  30 <- solve(data)
+	  x$setInverse(15)
+	  30
+	}
